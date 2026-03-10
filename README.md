@@ -11,14 +11,165 @@ The system collects raw data, cleans and transforms it, stores it in a relationa
 
 Project Architecture:-
 
-Data Sources (CSV / API / Database)
-            ↓
-Data Extraction (Python Scripts)
-            ↓
-Data Transformation (Pandas)
-            ↓
-Data Warehouse (PostgreSQL)
-            ↓
-Pipeline Automation (Apache Airflow)
-            ↓
-Analytics & Visualization
+Data Pipeline Flow
+
+1️⃣ Data Sources
+
+Data is collected from multiple sources such as CSV files, APIs, or relational databases.
+
+These sources contain raw, unprocessed data used for further analysis.
+
+2️⃣ Data Extraction
+
+Python scripts are used to extract the raw data from the sources.
+
+The extraction step gathers and prepares the data for transformation.
+
+3️⃣ Data Transformation
+
+Data is cleaned and transformed using Python and Pandas.
+
+Tasks include removing duplicates, handling missing values, formatting fields, and preparing structured datasets.
+
+4️⃣ Data Warehouse Storage
+
+The transformed data is loaded into a PostgreSQL data warehouse.
+
+Data is organized into tables optimized for analytical queries.
+
+5️⃣ Pipeline Automation
+
+The entire ETL workflow is automated using Apache Airflow.
+
+Airflow schedules tasks, manages dependencies, and monitors the pipeline execution.
+
+6️⃣ Analytics & Visualization
+
+Processed data is used for analytics and reporting.
+
+Dashboards and insights can be generated using tools like Power BI, Tableau, or Python visualization libraries.
+
+
+Features
+
+Automated ETL pipeline
+
+Data extraction from structured data sources
+
+Data cleaning and transformation using Python
+
+Storage in a structured data warehouse
+
+Workflow scheduling and monitoring using Apache Airflow
+
+SQL-based analytical queries
+
+Scalable pipeline design for large datasets
+
+
+Tech Stack
+
+Programming
+
+Python
+
+Data Processing
+
+Pandas
+
+NumPy
+
+Workflow Orchestration
+
+Apache Airflow
+
+Database
+
+PostgreSQL
+
+Query Language
+
+SQL
+
+Visualization (Optional)
+
+Power BI
+
+Tableau
+
+Matplotlib
+
+
+Project Structure
+
+1️⃣ data/
+
+This folder contains the raw dataset used for the ETL pipeline.
+
+Example file: raw_data.csv
+
+The data in this folder is the input source for the extraction process.
+
+2️⃣ etl/
+
+This folder contains the ETL scripts written in Python.
+
+Files included:
+
+extract.py → Extracts raw data from the source (CSV/API/Database).
+
+transform.py → Cleans and transforms the data using Python libraries like Pandas.
+
+load.py → Loads the processed data into the data warehouse database.
+
+3️⃣ airflow/
+
+Contains the pipeline automation workflow.
+
+The file etl_pipeline_dag.py defines a DAG (Directed Acyclic Graph) used by Apache Airflow to schedule and manage ETL tasks.
+
+Functions of this file:
+
+Define pipeline steps
+
+Set task dependencies
+
+Schedule automated runs
+
+4️⃣ database/
+
+Contains SQL scripts used to create the data warehouse schema.
+
+Example:
+
+schema.sql → Creates tables such as fact tables and dimension tables used for storing processed data.
+
+5️⃣ analytics/
+
+Contains SQL queries used for data analysis and reporting.
+
+Example:
+
+analysis_queries.sql → Queries to generate insights like sales trends, customer behavior, or product performance.
+
+6️⃣ requirements.txt
+
+Lists all the Python dependencies required to run the project.
+
+Example libraries:
+
+pandas
+
+psycopg2
+
+SQLAlchemy
+
+apache-airflow
+
+7️⃣ README.md
+
+Contains the project documentation.
+
+Explains project overview, architecture, setup instructions, and usage.
+
+
