@@ -50,7 +50,7 @@ Processed data is used for analytics and reporting.
 Dashboards and insights can be generated using tools like Power BI, Tableau, or Python visualization libraries.
 
 
-Features
+Features:-
 
 Automated ETL pipeline
 
@@ -100,7 +100,7 @@ Tableau
 Matplotlib
 
 
-Project Structure
+Project Structure:-
 
 1️⃣ data/
 
@@ -168,8 +168,72 @@ apache-airflow
 
 7️⃣ README.md
 
+
+ETL Pipeline Steps:-
+
+1. Extract
+
+The pipeline extracts raw data from multiple sources such as:
+
+CSV datasets
+
+APIs
+
+relational databases
+
+Python scripts collect and prepare the raw data for processing.
+
+2. Transform
+
+Data is cleaned and transformed using Python and Pandas.
+
+Transformation tasks include:
+
+Removing duplicates
+
+Handling missing values
+
+Formatting timestamps
+
+Aggregating metrics
+
+3. Load
+
+The processed data is loaded into a PostgreSQL data warehouse where it is structured for efficient querying and analysis.
+
+
+Workflow Automation:-
+
+The pipeline is automated using Apache Airflow DAGs.
+
+Pipeline tasks:
+
+Extract Data
+
+Transform Data
+
+Load Data to Warehouse
+
+Run Data Quality Checks
+
+Airflow schedules and monitors each step of the pipeline.
+
 Contains the project documentation.
 
 Explains project overview, architecture, setup instructions, and usage.
+
+
+Skills Demonstrated:-
+Data Engineering
+
+ETL Pipeline Development
+
+Data Warehousing
+
+Workflow Orchestration
+
+SQL Data Analysis
+
+Python Data Processing
 
 
