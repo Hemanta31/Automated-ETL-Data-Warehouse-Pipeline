@@ -202,7 +202,7 @@ Aggregating metrics
 The processed data is loaded into a PostgreSQL data warehouse where it is structured for efficient querying and analysis.
 
 
-Workflow Automation:-
+✅Workflow Automation:-
 
 The pipeline is automated using Apache Airflow DAGs.
 
